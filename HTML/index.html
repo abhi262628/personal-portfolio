@@ -5,8 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../CSS/header-style.css">
+    <style>
+        .page_container
+        {
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(autofit,min(350px,1fr));
+            grid-template-rows: auto 1fr auto;
+            background-color: gray;
+        }
+        .header_container
+        {
+            grid-column: 1/-1;
+            grid-row: 1/2;
+        }
+        .main_container
+        {
+            grid-column: 1/-1;
+            grid-row: 2/3;
+        }
+    </style>
 </head>
 <body>
-    <header>Hello Header</header>
+    <div class="pagecontainer">
+        <div class="header_container">Header</div>
+        <div class="main_container">Main</div>
+        <div class="footer_container">Footer</div>
+    </div>
 </body>
 </html>
